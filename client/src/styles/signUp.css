@@ -1,0 +1,124 @@
+/* Desktop Styles (unchanged) */
+/* __________Header__________ */
+.signHeader {
+    height: 100%;
+    padding: 2rem 5rem 3rem 5rem;
+    width: 60rem;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin: 10rem 5rem 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.signHeader h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(255, 87, 51);
+    margin: 1rem 2rem 2rem 2rem;
+    font-size: 3rem;
+}
+
+.signDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.signDetails label {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgb(255, 255, 255);
+    margin: 1rem;
+}
+
+.sdiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cdiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.mdiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.signDetails button {
+    border: none;
+    margin: 2rem 2rem 1rem 2rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight: 700;
+    background-color: rgb(255, 87, 51);
+    color: white;
+    padding: 1rem 7.5rem 1rem 7.5rem;
+    border-radius: 1rem;
+}
+
+#su_error {
+    margin-top: 1.5rem;
+    color: red;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+.error-message{
+    color: red;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+/* __________Footer__________ */
+.signFooter {
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.signFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: white;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .signHeader {
+        width: auto;
+        margin: 5rem 1rem 1rem 1rem;
+        padding: 2rem;
+    }
+
+    .signHeader h1 {
+        font-size: 2.5rem;
+        margin: 1rem;
+    }
+
+    .signDetails button {
+        padding: 1rem 3rem 1rem 3rem;
+        margin: 1rem;
+    }
+}

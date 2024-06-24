@@ -1,0 +1,229 @@
+/* Text Animation */
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .sliding-text {
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .fadeinout-text {
+    animation: fadeInOut 2s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+  
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+  
+    40% {
+      transform: translateY(-20px);
+    }
+  
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .bounce-text {
+    animation: bounce 1s ease infinite;
+  }
+  
+  @keyframes rotateScale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+  
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+  
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .rotate-text {
+    animation: rotateScale 2s linear infinite;
+  }
+  
+  /* Button animation */
+  .bulge-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* __________Landing Page__________ */
+  
+  .LPbody {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  /* About */
+  .LPtotalContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .LPabout {
+    background: url("/src/img/background.jpg")center/cover no-repeat;
+    min-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .LPabout h1 {
+    text-align: center;
+    color: rgb(255, 87, 51);
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    margin: 2rem 4rem 2rem 4rem;
+    font-size: 3.5rem;
+    font-style: normal;
+  }
+  
+  .LPabout p {
+    text-align: center;
+    color: rgb(255, 213, 204);
+    margin: 2rem 2rem;
+    /* Adjust margin for mobile */
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 1.6rem;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .LPabout button {
+    background-color: rgb(255, 87, 51);
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-family: "Archivo Black", sans-serif;
+  }
+  
+  .LPabout button:hover {
+    border: white solid 2px;
+  }
+  
+  /* FOM */
+  .LPfom {
+    background-color: rgb(255, 87, 51);
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .LPfom h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    margin: 2rem 5rem 2rem 5rem;
+    font-size: 3.5rem;
+    font-style: normal;
+  }
+  
+  .LPfom p {
+    text-align: center;
+    color: rgb(255, 213, 204);
+    margin: 2rem 2rem;
+    /* Adjust margin for mobile */
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 1.6rem;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .LPfom button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+  }
+  
+  /* __________.LPFooter__________ */
+  .LPFooter {
+    background-color: white;
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .LPFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgba(0, 0, 0, .8);
+  }

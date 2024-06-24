@@ -1,0 +1,115 @@
+/* __________Header__________ */
+.LogHeader {
+    height: 100%;
+    padding: 2rem 5rem 3rem 5rem;
+    width: 60rem;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin: 10rem 5rem 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.LogHeader h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(255, 87, 51);
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+.logDetails {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.logDetails div label {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgb(255, 255, 255);
+    margin: 1rem;
+}
+
+.logDetails button {
+    border: none;
+    margin: 2rem 2rem 1rem 2rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight: 700;
+    background-color: rgb(255, 87, 51);
+    color: white;
+    padding: .5rem 5rem .5rem 5rem;
+    border-radius: 2rem;
+}
+
+.logDetails p {
+    color: white;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 1.3rem;
+}
+
+.signup {
+    color: rgb(255, 87, 51);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#login-error-message {
+    margin-top: 1.5rem;
+    color: red;
+}
+
+/* __________LogFooter__________ */
+.LogFooter {
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.LogFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: white;
+}
+
+/* mobile use */
+/* .LogHeader */
+@media screen and (max-width: 768px) {
+    .LogHeader {
+        padding: 2rem 1rem 3rem 1rem;
+        /* Adjust padding for mobile */
+        width: 90%;
+        margin: 5rem auto;
+    }
+
+    .LogHeader h1 {
+        margin: 1rem 1rem 2rem 1rem;
+        /* Adjust margin for mobile */
+    }
+}
+
+/* Log Details */
+@media screen and (max-width: 768px) {
+    .logDetails button {
+        margin: 1rem 1rem 0.5rem 1rem;
+        /* Adjust margin for mobile */
+        padding: 0.5rem 3rem;
+        /* Adjust padding for mobile */
+    }
+}
+
+/* .LogFooter */
+@media screen and (max-width: 768px) {
+    .LogFooter h1 {
+        font-size: 0.8rem;
+        /* Adjust font size for mobile */
+    }
+}
