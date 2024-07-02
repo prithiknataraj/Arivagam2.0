@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/landingPage.css";
+import "../styles/nav.css";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ function LandingPage() {
 
   const content = {
     english: {
+      arivagam: "Arivagam.",
       button1: "Find Out More",
       button2: "Get Started",
       header: "Education: Where Boundaries Disappear and Potential Soars!",
@@ -34,6 +36,7 @@ function LandingPage() {
       hindi: "Hindi"
     },
     hindi: {
+      arivagam: "ज्ञान केंद्र.",
       button1: "और जानें",
       button2: "शुरू करें",
       header: "शिक्षा: जहाँ सीमाएँ गायब होती हैं और क्षमता ऊँचाइयों पर पहुँचती है!",
@@ -51,6 +54,7 @@ function LandingPage() {
       hindi: "हिंदी"
     },
     tamil: {
+      arivagam: "அறிவகம்.",
       button1: "மேலும் அறிக",
       button2: "தொடங்குங்கள்",
       header: "கல்வி: எல்லைகள் மறைந்து, திறன் உயரும் இடம்!",
@@ -69,12 +73,11 @@ function LandingPage() {
     }
   };
 
-
   return (
     <div className='LPbody'>
       <nav className="navbar navbar-expand-lg fixed-top lp-nav">
         <div className="container-fluid">
-          <a className="navbar-brand" style={{ color: "rgb(255, 87, 51)", fontSize: "2rem" }} href="#">Arivagam.</a>
+          <a className="navbar-brand" style={{ color: "rgb(255, 87, 51)", fontSize: "2rem" }} href="#">{content[language].arivagam}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

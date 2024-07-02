@@ -133,7 +133,7 @@
     color: rgb(255, 87, 51);
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
-    margin: 2rem 4rem 2rem 4rem;
+    margin: 2rem 9rem 2rem 9rem;
     font-size: 3.5rem;
     font-style: normal;
   }
@@ -141,7 +141,7 @@
   .LPabout p {
     text-align: center;
     color: rgb(255, 213, 204);
-    margin: 2rem 2rem;
+    margin: 2rem 8rem 2rem 8rem;
     /* Adjust margin for mobile */
     font-family: "Edu NSW ACT Foundation", cursive;
     font-size: 1.6rem;
@@ -207,28 +207,6 @@
     margin: 1rem;
     color: white;
     font-family: "Archivo Black", sans-serif;
-  }
-
-  .lp-nav {
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
-  }
-  
-  .navbar-brand {
-    margin-left: 1rem;
-    font-family: "Archivo Black", sans-serif;
-  }
-  
-  .nav-item {
-    font-size: 1.2rem;
-    margin-right: 2rem;
-    font-family: "Edu NSW ACT Foundation", cursive;
-    font-weight: 900;
-    cursor: pointer;
-  }
-  
-  .nav-link.dimmed {
-    opacity: 0.7;
   }
   
   /* __________.LPFooter__________ */
