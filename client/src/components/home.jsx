@@ -3,34 +3,37 @@ import "../styles/home.css";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../index.css";
+import { Link } from "react-router-dom";
+import "boxicons";
 
 const Home = () => {
-    const [videos, setVideos] =  useState({});
-    const [toDoItem, setToDoItem]= useState("");
-    const [toDoDate, setToDoDate]= useState("");
-    const [toDoTimeFrame, setToDoTimeFrame]= useState("");
+    const [language, setLanguage] = useState('english');
+    const [videos, setVideos] = useState({});
+    const [toDoItem, setToDoItem] = useState("");
+    const [toDoDate, setToDoDate] = useState("");
+    const [toDoTimeFrame, setToDoTimeFrame] = useState("");
     const [todoerror, setToDoError] = useState("");
     const [todo, setToDo] = useState({});
     const [todoShow, setToDoShow] = useState({});
     const [error, setError] = useState("");
 
-    const handleToDoItem= (event)=> {
+    const handleToDoItem = (event) => {
         setToDoItem(event.target.value);
     }
 
-    const handleToDoDate= (event)=> {
+    const handleToDoDate = (event) => {
         setToDoDate(event.target.value);
     }
 
-    const handleToDoTimeFrame= (event)=> {
+    const handleToDoTimeFrame = (event) => {
         setToDoTimeFrame(event.target.value);
     }
 
-    const handleToDoSubmit= async(event)=> {
+    const handleToDoSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response= await axios.post("http://localhost:8080/api/home", {
+            const response = await axios.post("http://localhost:8080/api/home", {
                 use: "todo",
                 todoItem: toDoItem,
                 todoDate: toDoDate,
@@ -43,9 +46,9 @@ const Home = () => {
                 setToDoError("* To Do Date Required");
             } else if (!toDoTimeFrame) {
                 setToDoError("* To Do Time Frame Required");
-            } else if (response.data.response=== "success"){
+            } else if (response.data.response === "success") {
                 setToDoShow("yes");
-                setToDo({item: toDoItem, date: toDoDate, time: toDoTimeFrame});
+                setToDo({ item: toDoItem, date: toDoDate, time: toDoTimeFrame });
             }
 
         } catch (error) {
@@ -78,8 +81,74 @@ const Home = () => {
         fetchData();
     }, []);
 
+    const content = {
+        english: {
+            arivagam: "Arivagam.",
+            tamil: "Tamil",
+            english: "English",
+            hindi: "Hindi"
+        },
+        hindi: {
+            arivagam: "ज्ञान केंद्र.",
+            tamil: "तमिल",
+            english: "अंग्रेज़ी",
+            hindi: "हिंदी"
+        },
+        tamil: {
+            arivagam: "அறிவகம்.",
+            tamil: "தமிழ்",
+            english: "ஆங்கிலம்",
+            hindi: "இந்தி"
+        }
+    };
+
     return (
         <div>
+            <nav className="navbar navbar-expand-lg fixed-top lp-nav">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" style={{ color: "rgb(255, 87, 51)", fontSize: "2rem" }} to={"/home"}>{content[language].arivagam}</Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-1">
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" aria-current="page" to={"/chat"}>Chat Room</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" aria-current="page" to={"/document"}>Document</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" to={"/meet"}>Meet</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" to={"/mentor"}>Mentor</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" to={"/nanba"}>Nanba</Link>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link text-white dimmed">Scholarship</a>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link text-white dropdown-toggle dimmed" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Language
+                                </a>
+                                <ul className="dropdown-menu" style={{ backgroundColor: "rgba(0, 0, 0, 0.7)", borderColor: "rgba(255, 255, 255, 0.4)" }}>
+                                    <li><a className="dropdown-item text-white" onClick={() => setLanguage('english')} href="#">{content[language].english}</a></li>
+                                    <li><hr className="dropdown-divider" style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}></hr></li>
+                                    <li><a className="dropdown-item text-white" onClick={() => setLanguage('hindi')} href="#">{content[language].hindi}</a></li>
+                                    <li><hr className="dropdown-divider" style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}></hr></li>
+                                    <li><a className="dropdown-item text-white" onClick={() => setLanguage('tamil')} href="#">{content[language].tamil}</a></li>
+                                </ul>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link text-white dimmed" to={"/editprofile"}><box-icon name='user-circle' type='solid' flip='horizontal' color='#ffffff' size="2rem"></box-icon>x</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <header>
                 <div className="ToDo">
                     <h1>Welcome to ARIVAGAM.2.0</h1>
@@ -88,8 +157,8 @@ const Home = () => {
                     </p>
                     <form className="homeToDo" onSubmit={handleToDoSubmit}>
                         <div className="input-group mb-3">
-                            <input type="text" placeholder="Add a to-do item..." value={toDoItem} onChange={handleToDoItem}/>
-                            <input type="datetime-local" value={toDoDate} onChange={handleToDoDate}/>
+                            <input type="text" placeholder="Add a to-do item..." value={toDoItem} onChange={handleToDoItem} />
+                            <input type="datetime-local" value={toDoDate} onChange={handleToDoDate} />
                             <input type="number" placeholder="Time frame in hours" value={toDoTimeFrame} onChange={handleToDoTimeFrame} />
                             <button className="homeButton" type="submit">Add</button>
                         </div>

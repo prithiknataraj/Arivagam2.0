@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/signUp.css";
 import "../index.css";
 import axios from "axios";
@@ -201,7 +201,7 @@ const SignUp = () => {
         <div>
             <nav className="navbar navbar-expand-lg fixed-top lp-nav">
                 <div className="container-fluid">
-                    <a className="navbar-brand" style={{ color: "rgb(255, 87, 51)", fontSize: "2rem" }} href="#">{content[language].arivagam}</a>
+                    <Link className="navbar-brand" style={{ color: "rgb(255, 87, 51)", fontSize: "2rem" }} to={'/'}>{content[language].arivagam}</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

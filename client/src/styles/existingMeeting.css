@@ -1,0 +1,95 @@
+.EMheader {
+    height: 100%;
+    padding: 2rem 5rem 3rem 5rem;
+    width: 60rem;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin: 10rem 5rem 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.EMheader h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(255, 87, 51);
+    margin: 1rem 2rem 5rem 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.EMheader p {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 1rem;
+}
+
+.EMheader div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.EMheader button {
+    border: none;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight: 700;
+    background-color: rgb(255, 87, 51);
+    color: white;
+    padding: .2rem 1.5rem .2rem 1.5rem;
+    border-radius: .5rem;
+}
+
+/* __________Footer__________ */
+.EMFooter {
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.EMFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .EMheader {
+        width: 90%;
+        margin: 5rem auto 1rem auto;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+    }
+
+    .EMheader h1 {
+        font-size: 2.5rem;
+        margin: 1rem auto 3rem auto;
+    }
+
+    .EMheader p {
+        margin: 0.5rem;
+    }
+
+    .EMheader button {
+        font-size: 1.2rem;
+        padding: .2rem 1rem;
+        margin: 1rem;
+    }
+
+    .EMFooter {
+        margin-top: 2rem;
+    }
+}

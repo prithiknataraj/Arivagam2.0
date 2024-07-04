@@ -1,0 +1,119 @@
+.MHheader {
+    height: 100%;
+    padding: 2rem 3rem 1rem 3rem;
+    width: 75rem;
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin: 10rem 5rem 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.MHheader h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(255, 87, 51);
+    margin: 1rem 2rem 2rem 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.MHheader p {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1rem;
+    text-align: center;
+}
+
+.MHheader div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8rem 2rem 2rem 2rem;
+}
+
+.MHheader div button {
+    padding: .5rem 3rem .5rem 3rem;
+    border: none;
+    border-radius: .5rem;
+    margin: 0 1rem 0 1rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight: 600;
+}
+
+.MHB1 {
+    background-color: rgb(255, 87, 51);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.MHB2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.MHSupportTeam {
+    margin-top: 3rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: rgba(255, 87, 51, 0.8);
+}
+
+/* __________Footer__________ */
+.MHFooter {
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.MHFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .MHheader {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 5rem auto 1rem auto; /* Center align header and reduce top margin */
+        padding: 2rem 1.5rem 1rem 1.5rem; /* Adjust padding */
+    }
+
+    .MHheader h1 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        margin: 1rem auto; /* Center align header text */
+    }
+
+    .MHheader p {
+        margin: 0.5rem; /* Reduce margin for smaller screens */
+    }
+
+    .MHheader div {
+        margin: 4rem auto 1rem auto; /* Center align buttons and reduce top margin */
+    }
+
+    .MHheader div button {
+        padding: .5rem 2rem; /* Adjust button padding */
+        margin: 0.5rem; /* Adjust button margin */
+    }
+
+    .MHSupportTeam {
+        margin-top: 2rem; /* Adjust margin for support team text */
+        font-size: 1.2rem; /* Reduce font size for support team text */
+    }
+
+    .MHFooter {
+        margin-top: 2rem; /* Adjust margin for footer */
+    }
+}

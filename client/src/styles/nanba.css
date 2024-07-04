@@ -1,0 +1,109 @@
+/* Desktop Styles */
+/* __________Header__________ */
+.nanbaHeader {
+    width: 75rem;
+    height: auto;
+    margin: 3rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.nanbaForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nanbaInput {
+    width: 40rem;
+    background-color: rgba(255, 87, 51, 0.4);
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+#nanbaSend {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 1.3rem 1rem;
+}
+
+#nanbaCR {
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.nanbaInput {
+    align-self: flex-start;
+    max-width: 60%;
+}
+
+.nanbaInput p {
+    background-color: rgba(255, 87, 51, 0.2);
+    backdrop-filter: blur(2px);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 1rem 1rem 3rem;
+    border: .5px solid rgba(255, 87, 51, 0.3);
+    border-radius: 0 2rem 2rem 2rem;
+    font-size: 1.5rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+.nanbaOutput {
+    align-self: flex-end;
+    max-width: 60%;
+}
+
+.nanbaOutput p {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(2px);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 3rem 1rem 1rem;
+    border: .5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem 0 2rem 2rem;
+    font-size: 1.5rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+}
+
+/* __________Footer__________ */
+.nanbaContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nanbaFooter {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .nanbaHeader {
+        width: auto;
+        margin: 2rem 0.5rem 1rem 0.5rem;
+        padding: 1rem;
+    }
+
+    #nanbaInput {
+        width: calc(100% - 2rem);
+    }
+
+    .nanbaInput, .nanbaOutput {
+        max-width: 100%;
+    }
+
+    .nanbaInput p, .nanbaOutput p {
+        padding: 1rem;
+    }
+}   

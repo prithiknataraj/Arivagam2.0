@@ -1,0 +1,108 @@
+/* Desktop Styles (unchanged) */
+/* __________Header__________ */
+.MentorHeader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 2rem 5rem 3rem 5rem;
+    min-width: 60rem;
+}
+
+.MentorHeader h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: rgb(255, 87, 51);
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+.MentorDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 42, 0, 0.08);
+    backdrop-filter: blur(2px);
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    min-width: 60rem;
+}
+
+.MentorDetails div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.MentorDetails div h1 {
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 1rem 1.5rem 1rem 0.5rem;
+    font-size: 1rem;
+}
+
+.MentorCButton {
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    background-color: rgb(255, 87, 51);
+    color: white;
+    border-radius: .6rem;
+}
+
+/* __________Footer__________ */
+.MentorFooter {
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.MentorFooter h1 {
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    color: white;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    .MentorHeader {
+        padding: 2rem;
+        min-width: auto;
+    }
+
+    .MentorDetails {
+        min-width: auto;
+    }
+
+    .MentorDetails div h1 {
+        margin: 1rem 0.5rem;
+    }
+
+    .MentorCButton {
+        margin: 1rem;
+    }
+
+    .MentorFooter {
+        height: auto;
+    }
+
+    .MentorFooter h1 {
+        font-size: 0.8rem;
+    }
+}
